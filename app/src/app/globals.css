@@ -1,0 +1,723 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables for design system */
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --primary: hsl(222.2, 47.4%, 11.2%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 47.4%, 11.2%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(222.2, 84%, 4.9%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222.2, 47.4%, 11.2%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+  line-height: inherit;
+}
+
+/* Utility classes for common layouts and styles */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-blue-50 {
+  --tw-gradient-from: hsl(214, 100%, 97%);
+  --tw-gradient-to: hsla(214, 100%, 97%, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-indigo-100 {
+  --tw-gradient-to: hsl(235, 100%, 94%);
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-900 {
+  color: hsl(220, 9%, 9%);
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-gray-600 {
+  color: hsl(220, 9%, 46%);
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -2px hsla(0, 0%, 0%, 0.05);
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-blue-100 {
+  background-color: hsl(214, 100%, 93%);
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.text-blue-600 {
+  color: hsl(217, 91%, 60%);
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.border-t {
+  border-top-width: 1px;
+  border-color: hsl(var(--border));
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.text-blue-500 {
+  color: hsl(217, 91%, 60%);
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+.border {
+  border-width: 1px;
+  border-color: hsl(var(--border));
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.text-green-500 {
+  color: hsl(142, 71%, 45%);
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bg-green-600 {
+  background-color: hsl(142, 71%, 35%);
+}
+
+.hover\:bg-green-700:hover {
+  background-color: hsl(142, 71%, 25%);
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.bg-gray-100 {
+  background-color: hsl(220, 9%, 93%);
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.bg-yellow-500 {
+  background-color: hsl(45, 93%, 47%);
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-blue-50 {
+  background-color: hsl(214, 100%, 97%);
+}
+
+.border-blue-200 {
+  border-color: hsl(214, 100%, 87%);
+}
+
+.text-blue-800 {
+  color: hsl(217, 91%, 30%);
+}
+
+.text-blue-700 {
+  color: hsl(217, 91%, 40%);
+}
+
+.text-blue-600 {
+  color: hsl(217, 91%, 50%);
+}
+
+.text-blue-500 {
+  color: hsl(217, 91%, 60%);
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.bg-green-50 {
+  background-color: hsl(142, 71%, 97%);
+}
+
+.border-green-200 {
+  border-color: hsl(142, 71%, 87%);
+}
+
+.text-green-800 {
+  color: hsl(142, 71%, 30%);
+}
+
+.text-green-700 {
+  color: hsl(142, 71%, 40%);
+}
+
+.text-green-600 {
+  color: hsl(142, 71%, 50%);
+}
+
+.bg-yellow-50 {
+  background-color: hsl(45, 93%, 97%);
+}
+
+.border-yellow-200 {
+  border-color: hsl(45, 93%, 87%);
+}
+
+.text-yellow-800 {
+  color: hsl(45, 93%, 30%);
+}
+
+.text-yellow-700 {
+  color: hsl(45, 93%, 40%);
+}
+
+.text-yellow-600 {
+  color: hsl(45, 93%, 50%);
+}
+
+.text-yellow-100 {
+  color: hsl(45, 93%, 90%);
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.space-y-1 > * + * {
+  margin-top: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.text-gray-400 {
+  color: hsl(220, 9%, 56%);
+}
+
+/* Button component styles */
+.btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  border-radius: 8px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: all 150ms ease !important;
+  outline: none !important;
+  cursor: pointer !important;
+  border: 2px solid #007bff !important;
+  height: 2.25rem !important;
+  padding: 0 1rem !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+  min-width: 80px !important;
+}
+
+.btn:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #007bff !important;
+  color: white !important;
+  box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.btn-destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.btn-destructive:hover {
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+.btn-outline {
+  border: 1px solid hsl(var(--input));
+  background-color: hsl(var(--background));
+  box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.btn-outline:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+.btn-ghost {
+  background-color: transparent;
+}
+
+.btn-ghost:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.btn-link {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+}
+
+.btn-sm {
+  height: 2rem;
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  height: 2.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0 2rem;
+  font-size: 1rem;
+}
+
+.btn-icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  padding: 0;
+}
+
+/* Toast component styles */
+.toast-viewport {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  max-height: 100vh;
+  width: 100%;
+  flex-direction: column-reverse;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .toast-viewport {
+    bottom: 0;
+    right: 0;
+    top: auto;
+    flex-direction: column;
+    max-width: 420px;
+  }
+}
+
+.toast {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid hsl(var(--border));
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+  box-shadow: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -2px hsla(0, 0%, 0%, 0.05);
+  transition: all 150ms ease;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.toast-destructive {
+  border-color: hsl(var(--destructive));
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.toast-close {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: calc(var(--radius) - 4px);
+  padding: 0.25rem;
+  color: hsl(var(--foreground) / 0.5);
+  opacity: 0;
+  transition: opacity 150ms ease;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toast-close:hover {
+  color: hsl(var(--foreground));
+}
+
+.toast-close:focus {
+  opacity: 1;
+  outline: 2px solid hsl(var(--ring));
+}
+
+.toast:hover .toast-close {
+  opacity: 1;
+}
+
+.toast-destructive .toast-close {
+  color: hsl(220, 0%, 80%);
+}
+
+.toast-destructive .toast-close:hover {
+  color: hsl(220, 0%, 95%);
+}
+
+.toast-destructive .toast-close:focus {
+  outline-color: hsl(0, 84%, 60%);
+}
+
+.toast-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.toast-description {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .btn-lg {
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .btn {
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .btn-sm {
+    height: 1.75rem;
+    padding: 0 0.5rem;
+    font-size: 0.675rem;
+  }
+}
