@@ -25,7 +25,7 @@ export const monadTestnet = defineChain({
 });
 
 export const config = getDefaultConfig({
-  appName: 'X-Monad Faucet',
+  appName: 'ZK-Monad Faucet',
   projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || 'demo-project-id',
   chains: [monadTestnet],
   ssr: true,

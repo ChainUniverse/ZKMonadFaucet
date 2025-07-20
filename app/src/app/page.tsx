@@ -47,7 +47,7 @@ export default function Home() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '32px 16px' }}>
           <div style={{ textAlign: 'center' }}>
             <h1 style={{ fontSize: '36px', fontWeight: 'bold', color: '#111827', marginBottom: '16px' }}>
-              X-Monad Faucet
+              ZK-Monad Faucet
             </h1>
             <p style={{ fontSize: '20px', color: '#4b5563' }}>加载中...</p>
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <Shield style={{ width: '32px', height: '32px', color: '#2563eb' }} />
               <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#111827', margin: 0 }}>
-                X-Monad Faucet
+                ZK-Monad Faucet
               </h2>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
@@ -237,7 +237,7 @@ export default function Home() {
               color: '#111827', 
               marginBottom: '16px' 
             }}>
-              关于 X-Monad Faucet
+              关于 ZK-Monad Faucet
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: '#6b7280' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>

@@ -8,7 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'X-Monad Faucet',
+  title: 'ZK-Monad Faucet',
   description: 'zkTLS身份验证的Token分发系统',
 };
 
