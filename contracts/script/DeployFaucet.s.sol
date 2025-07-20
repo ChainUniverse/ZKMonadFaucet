@@ -12,7 +12,7 @@ contract DeployFaucet is Script {
         vm.startBroadcast(deployerPrivateKey);
         
         // Use the already deployed XAccountRegistry address
-        address xAccountRegistry = 0x5DDf62210f86A0b10fc3036D7E426Fa784Ad2b7C;
+        address xAccountRegistry = 0xD659cfc0D1642aEc9aa7B3fbcd339B836A1b6d60;
         
         // Deploy the MonadFaucet contract
         MonadFaucet faucet = new MonadFaucet(xAccountRegistry);

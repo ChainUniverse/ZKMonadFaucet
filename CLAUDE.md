@@ -49,12 +49,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Monad Testnet (Chain ID: 10143)
 
-- **XAccountRegistry**: `0xC20A0c2a51906e5a8c25F7Fc135A8266291bfd70`
+- **XAccountRegistry**: `0xD659cfc0D1642aEc9aa7B3fbcd339B836A1b6d60`
   - 功能：管理X账号与钱包地址的绑定关系
   - 验证器地址：`0x1Ad7fD53206fDc3979C672C0466A1c48AF47B431` (Primus zkTLS)
   - 更新：已实现真实的zkTLS验证，验证attestation data中的screen_name与传入的xAccount匹配
 
-- **MonadFaucet**: `0x31141eF10051eB895dAeb5402fD34fB9d61585Cc`
+- **MonadFaucet**: `0xdc5A3601541518A3B52879ef5F231f6A624C93EB`
   - 功能：向绑定X账号的用户分发MON代币
   - 领取额度：0.1 MON
   - 冷却期：7天
